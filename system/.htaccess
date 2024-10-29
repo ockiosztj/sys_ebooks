@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+
+    RewriteEngine On
+  
+    RewriteRule ^([0-9a-zA-Z-_]+)/([0-9a-zA-Z-_]+)/([0-9a-zA-Z-_]+)$ index.php?page=$1&view=$2&action=$3 [QSA]
+    RewriteRule ^([0-9a-zA-Z-_]+)/([0-9a-zA-Z-_]+)$ index.php?page=$1&view=$2 [QSA]
+    RewriteRule ^([0-9a-zA-Z-_]+)$ index.php?page=$1 [QSA]
+  
+</IfModule>
